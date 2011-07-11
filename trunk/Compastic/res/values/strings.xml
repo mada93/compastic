@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">Compastic</string>
+    <string name="introduction">Welcome to Compastic. This is a little application (beta version) I designed on my spare time. Please be gentle!</string>
+    <string name="instruction">Specify a place of interest and Compastic will give you the geographical direction to look at as well as the distance to that place.</string>
+    <string name="warning">A word of caution: compastic is for &quot;fun&quot; only, do not trust the directions in serious situations. The accuracy of results vary greatly with the device, environment and calibration. To calibrate execute an 8 shape with the phone.</string>
+    <string name="author">Software written by Thomas. Please let me know of suggestions, requests and especially bugs!</string>
+    <string name="version">The application is in a very beta stage. I will improve it very soon!</string>
+    <string-array name="tests">
+        <item>test</item>
+    </string-array>
+</resources>

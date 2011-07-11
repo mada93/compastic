@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/background"
+    android:clipChildren="true" android:padding="0dip">
+	<RelativeLayout
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent" 
+	>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/banner"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+		android:background="@android:color/transparent"
+    >
+		<Spinner  
+		    android:id="@+id/listplaces"
+		    android:entries="@array/tests"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+		    android:drawSelectorOnTop="true"
+			android:background="@android:color/transparent"
+		    />
+	</LinearLayout>
+
+		<View 
+			android:layout_height="16px"
+			android:layout_width="fill_parent" 
+			android:layout_below="@id/banner"
+			android:background="@drawable/shadow"> 
+		</View>
+
+		<com.google.ads.AdView
+			android:id="@+id/ad"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+	        ads:adUnitId="yourid"
+	        ads:adSize="BANNER"
+	        ads:loadAdOnCreate="true"
+		    android:layout_alignParentBottom="true"
+		/>
+		
+		<LinearLayout
+			android:id="@+id/buttons"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+		    android:layout_above="@id/ad"
+			android:background="@android:color/transparent"
+			android:layout_centerVertical="true"
+		    android:padding="5dip" 
+			>
+			<TextView
+				android:id="@+id/textviewas"
+				android:text="View as Map"
+		        android:layout_height="fill_parent"
+		        android:layout_width="0dip"
+		        android:layout_weight="1.0"
+		        android:gravity="center_vertical"
+		        android:textSize="20dp"
+		        android:textColor="@color/text_color"
+		    /> 
+			<ImageButton
+				android:id="@+id/modebutton"
+				android:background="@drawable/ic_menu_mapmode"
+			    android:layout_width="40dip" 
+			    android:layout_height="40dip" 
+			android:layout_gravity="right"/>
+		</LinearLayout>
+		
+		<ViewFlipper
+			android:id="@+id/viewflipper"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+			android:layout_margin="2dp"
+		    android:background="@color/canvasbackground"
+		    android:layout_above="@id/buttons"
+		    android:layout_below="@id/banner"
+		>
+			<com.metaaps.mobile.compastic.widgets.CompassView  
+				android:id="@+id/compassview"
+			    android:layout_width="fill_parent" 
+			    android:layout_height="fill_parent"
+		    />
+		    
+			<com.google.android.maps.MapView
+			    android:id="@+id/mapview"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_above="@id/placename"
+			    android:clickable="true"
+			    android:apiKey="yourkey"
+				android:layout_margin="5dp"
+			/>
+		</ViewFlipper>	
+	</RelativeLayout>
+
+</LinearLayout>
