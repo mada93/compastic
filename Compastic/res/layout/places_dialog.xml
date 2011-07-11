@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:background="#ddcba5"
+>
+    <ImageButton
+    	android:id="@+id/okbutton"
+		android:clickable="true"
+		android:background="@drawable/okbutton"
+	    android:layout_width="40dip" 
+	    android:layout_height="40dip"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="5dip" 
+	    android:layout_centerHorizontal="true"
+    />
+	<ListView
+		android:id="@+id/placeslist"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="20dip"
+		android:textColor="@color/text_color"
+		android:gravity="center_horizontal"
+		android:layout_alignParentTop="true"
+		android:layout_above="@id/okbutton"
+		android:layout_margin="5dip"
+		android:padding="10dip"
+    />
+</RelativeLayout>

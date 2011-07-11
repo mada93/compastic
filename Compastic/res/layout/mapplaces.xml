@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:myapp="http://schemas.android.com/apk/res/com.metaaps.mobile.compastic"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/background"
+    >
+	<RelativeLayout
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent" 
+	>
+		<Spinner
+			android:id="@+id/listplaces"
+		    android:layout_width="fill_parent" 
+		    android:layout_alignParentTop="true"
+			android:drawSelectorOnTop="true"
+			android:background="@drawable/myspinner_background"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+		/>     
+
+		<com.google.android.maps.MapView
+		    android:id="@+id/mapview"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@id/placename"
+		    android:clickable="true"
+		    android:apiKey="yourkey"
+			android:layout_margin="5dp"
+		    android:layout_alignParentTop="true"
+		/>
+	</RelativeLayout>
+
+	<com.google.ads.AdView
+		android:id="@+id/ad"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		myapp:backgroundColor="#000000"
+		myapp:primaryTextColor="#FFFFFF"
+		myapp:secondaryTextColor="#CCCCCC"
+	/>
+	
+</LinearLayout>
